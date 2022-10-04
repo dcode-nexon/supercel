@@ -68,7 +68,7 @@ header ul li::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   padding: 10px;
   border: 1px dashed #fff;
@@ -97,6 +97,45 @@ header ul li::after {
 }
 .bg ul li:nth-of-type(3) {
   background: url(../img/bg3.jpg) no-repeat center/cover;
+}
+
+.phoneBox {
+  width: 450px;
+  height: 787px;
+  background: url(../img/bgPhone.png) no-repeat 0 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -50%);
+  z-index: 2;
+}
+.phoneBox .frame {
+  width: 250px;
+  height: 444px;
+  position: absolute;
+  top: 175px;
+  left: 98px;
+  overflow: hidden;
+}
+.phoneBox .frame ul {
+  width: 300%;
+  height: 100%;
+  display: flex;
+}
+.phoneBox .frame ul li {
+  width: 33.333%;
+}
+.phoneBox .prev,
+.phoneBox .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.phoneBox .prev {
+  left: 0;
+}
+.phoneBox .next {
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

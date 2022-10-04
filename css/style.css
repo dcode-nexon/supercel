@@ -81,7 +81,7 @@ header ul li::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-100%, -50%);
+  transform: translate(-90%, -50%);
   z-index: 2;
 }
 .phoneBox .frame {
@@ -118,7 +118,7 @@ header ul li::after {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(50%, -60%);
+  transform: translate(30%, -60%);
   z-index: 2;
 }
 .txtBox .txt {

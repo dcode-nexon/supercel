@@ -59,30 +59,6 @@ header {
 	}
 }
 
-.bg {
-	width: 100%;
-	height: 100vh;
-	position: absolute;
-	top: 0;
-	left: 0;
-
-	ul {
-		width: 300%;
-		height: 100%;
-		display: flex;
-
-		li {
-			width: 33.333%;
-
-			@for $i from 1 through 3 {
-				&:nth-of-type(#{$i}) {
-					background: url(../img/bg#{$i}.jpg) no-repeat center/cover;
-				}
-			}
-		}
-	}
-}
-
 .phoneBox {
 	width: 450px;
 	height: 787px;
@@ -123,5 +99,54 @@ header {
 	}
 	.next {
 		right: 0;
+	}
+}
+
+.txtBox {
+	width: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(50%, -60%);
+	z-index: 2;
+
+	.txt {
+		width: 100%;
+		height: 310px;
+		margin-bottom: 50px;
+		overflow: hidden;
+
+		ul {
+			width: 300%;
+			display: flex;
+
+			li {
+				width: 33.333%;
+			}
+		}
+	}
+}
+
+.bg {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	ul {
+		width: 300%;
+		height: 100%;
+		display: flex;
+
+		li {
+			width: 33.333%;
+
+			@for $i from 1 through 3 {
+				&:nth-of-type(#{$i}) {
+					background: url(../img/bg#{$i}.jpg) no-repeat center/cover;
+				}
+			}
+		}
 	}
 }

@@ -5,11 +5,17 @@ const btnPrev = document.querySelector('.prev');
 const btnNext = document.querySelector('.next');
 const frames = [picList, txtList, bgList];
 const speed = 500;
+let enableClick = true;
 
 for (const el of frames) el.style.marginLeft = '-100%';
 
-btnNext.addEventListener('click', (e) => {
+btnNext.addEventListener('click', next);
+btnPrev.addEventListener('click', prev);
+
+function next(e) {
 	e.preventDefault();
+	if (!enableClick) return;
+	enableClick = false;
 
 	for (const el of frames) {
 		new Anime(el, {
@@ -19,13 +25,16 @@ btnNext.addEventListener('click', (e) => {
 			callback: () => {
 				el.append(el.firstElementChild);
 				el.style.marginLeft = '-100%';
+				enableClick = true;
 			},
 		});
 	}
-});
+}
 
-btnPrev.addEventListener('click', (e) => {
+function prev(e) {
 	e.preventDefault();
+	if (!enableClick) return;
+	enableClick = false;
 
 	for (const el of frames) {
 		new Anime(el, {
@@ -35,7 +44,8 @@ btnPrev.addEventListener('click', (e) => {
 			callback: () => {
 				el.prepend(el.lastElementChild);
 				el.style.marginLeft = '-100%';
+				enableClick = true;
 			},
 		});
 	}
-});
+}
